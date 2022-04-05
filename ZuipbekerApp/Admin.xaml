@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZuipbekerApp"
         mc:Ignorable="d"
+        Icon="img/Logo.ico"
         Title="Admin" WindowState="Maximized">
     <Grid>
         <ScrollViewer Grid.Row="2" Grid.Column="0" VerticalScrollBarVisibility="Auto">

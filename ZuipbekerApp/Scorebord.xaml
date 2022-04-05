@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZuipbekerApp"
         mc:Ignorable="d"
+        Icon="img/Logo.ico"
         Title="Scorebord" WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
