@@ -23,22 +23,26 @@ namespace ZuipbekerApp.Controllers
             {
                 System.IO.File.Create(teamsTxt);
             }
-            string[] lines = System.IO.File.ReadAllLines(@"..\..\..\..\Zuipbeker\files\Teams.txt");
-            foreach (string team in lines)
+            else
             {
-                Team t;
-                if (File.Exists(@"..\..\..\..\Zuipbeker\files\" + team + ".txt"))
+                string[] lines = System.IO.File.ReadAllLines(@"..\..\..\..\Zuipbeker\files\Teams.txt");
+                foreach (string team in lines)
                 {
-                    var lastline = File.ReadLines(@"..\..\..\..\Zuipbeker\files\" + team + ".txt").Last();
-                    t = new Team(team, Int16.Parse(lastline));
-                }
-                else
-                {
-                    t = new Team(team);
-                }
+                    Team t;
+                    if (File.Exists(@"..\..\..\..\Zuipbeker\files\" + team + ".txt"))
+                    {
+                        var lastline = File.ReadLines(@"..\..\..\..\Zuipbeker\files\" + team + ".txt").Last();
+                        t = new Team(team, Int16.Parse(lastline));
+                    }
+                    else
+                    {
+                        t = new Team(team);
+                    }
 
-                teams.Add(t);
+                    teams.Add(t);
+                }
             }
+            
             if (!System.IO.File.Exists(logTxt))
             {
                 System.IO.File.Create(logTxt);
