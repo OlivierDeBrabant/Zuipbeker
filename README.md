@@ -22,7 +22,7 @@ Deze applicatie dient om het systeem van een zuipbeker op een evenement te digit
 ## Installer folder
 - Deze map bevat een installer (Weet niet zeker of dit werkt op andere pc's of demijne (Olivier))
 
-## files folder
+## Files folder
 - Deze map bevat de teams. Je kan ook kiezen om zelf een nieuwe locatie te gebruiken om je eigen teams in op te slaan.
 
 ## TODO
