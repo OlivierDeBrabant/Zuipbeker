@@ -1,5 +1,3 @@
-> !! Wanneer je de files folder cloned en niet verwijdert zal de applicatie de teams uit de files folder gebruiken !!
-
 > Indien je de applicatie enkel wilt testen staat de ZuipbekerApp.exe file in de map bin/Debug
 
 # Zuipbeker
@@ -20,6 +18,12 @@ Deze applicatie dient om het systeem van een zuipbeker op een evenement te digit
 ### Automatisch Opslaan van aantal bier per teams
 - Per team wordt er een TEAMNAAM.txt bestand aangemaakt wanneer er voor het eerst een pint wordt geregistreerd
 - In dat bestand zal het cummulatief aantal bier telkens opgeslaan worden op een nieuwe lijn
+
+## Installer folder
+- Deze map bevat een installer (Weet niet zeker of dit werkt op andere pc's of demijne (Olivier))
+
+## files folder
+- Deze map bevat de teams. Je kan ook kiezen om zelf een nieuwe locatie te gebruiken om je eigen teams in op te slaan.
 
 ## TODO
 - Dynamische fontsize (Top 3 al gedaan, overige teams nog niet)
