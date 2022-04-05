@@ -22,8 +22,7 @@ Deze applicatie dient om het systeem van een zuipbeker op een evenement te digit
 - In dat bestand zal het cummulatief aantal bier telkens opgeslaan worden op een nieuwe lijn
 
 ## TODO
-- Dynamische fontsize (vooral op Scorebord pagina)
+- Dynamische fontsize (Top 3 al gedaan, overige teams nog niet)
 - Errorhandling
-  - Vooral wanneer een teamnaam geen correcte filenaam kan zijn (vb. een tab in de naam, tekens die niet toegestaan zijn ...)
 - Styling op Admin pagina
 - Index geven aan teams buiten top 3
