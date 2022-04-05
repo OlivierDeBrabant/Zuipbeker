@@ -1,5 +1,7 @@
 > !! Wanneer je de files folder cloned en niet verwijdert zal de applicatie de teams uit de files folder gebruiken !!
 
+> Indien je de applicatie enkel wilt testen staat de ZuipbekerApp.exe file in de map bin/Debug
+
 # Zuipbeker
 Deze applicatie dient om het systeem van een zuipbeker op een evenement te digitaliseren. De applicatie opent een Admin pagina die dient om voor ieder team bier toe te voegen en te verwijderen en opent een Scorebord pagina die dient om de tussenstand van alle teams te tonen.
 
