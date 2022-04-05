@@ -26,3 +26,4 @@ Deze applicatie dient om het systeem van een zuipbeker op een evenement te digit
 - Errorhandling
   - Vooral wanneer een teamnaam geen correcte filenaam kan zijn (vb. een tab in de naam, tekens die niet toegestaan zijn ...)
 - Styling op Admin pagina
+- Index geven aan teams buiten top 3
