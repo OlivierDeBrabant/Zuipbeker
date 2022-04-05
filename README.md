@@ -18,6 +18,6 @@ Deze applicatie dient om het systeem van een zuipbeker op een evenement te digit
 - In dat bestand zal het cummulatief aantal bier telkens opgeslaan worden op een nieuwe lijn
 
 ## TODO
-- Dynamische fontsize
+- Dynamische fontsize (vooral op Scorebord pagina)
 - Errorhandling
 - Styling op Admin pagina
