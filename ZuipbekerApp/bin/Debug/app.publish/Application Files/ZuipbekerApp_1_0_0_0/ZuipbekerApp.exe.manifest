@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ZuipbekerApp.exe" version="1.0.0.0" publicKeyToken="a4f31484a0e57355" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ZuipbekerApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ZuipbekerApp.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ZuipbekerApp.exe" size="64960">
+      <assemblyIdentity name="ZuipbekerApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>xaRYtDOTna4ZomBjCt4QBzQI6cK9y6Q2uV0hdrVD9aw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ZuipbekerApp.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=PC-OLIVIER\olivi" issuerKeyHash="528c307504b4908aa9e1a172c149c2cfb6e4910f" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>FKp784s4Eba63cm7Sv4Jmt5lybv6wTb+LM8/Oe1TB0k=</DigestValue></Reference></SignedInfo><SignatureValue>PjlB9YI0iQ9oXi+gP0H9efw/B1XkRw8uLxtJiNRXfjVZkfpFI9vRjUAFhmTttScaxix3TaIo6A6q6KePrWpPL41TqzRCPbCvwngA/4xjc6R1e1Q0Bx1UF856VpIQwb/0tlf7NWA73xpkb2VirJBFPlN2+hBQ1Zzq1XvY1cB4hsI=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>0N5Wad/Fs2ZyAc3TvonP6WCDfNrBW7DBkEsWf6QrRtiEQ2aiNVCdqlhhpHniXzNuhQj5WQupexnQyRQq3gAUfUWDxQyrXNWQ4OhLshgfmrDMmJLpApHFvYFORU4SMrry7iZSw2736yLkqBZOW7fa0Deh8Dznw4JDmMvW7iECOZU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="490753ed393fcf2cfe36c1fabbc965de9a09fe4abbc9ddbab611388bf37baa14" Description="" Url=""><as:assemblyIdentity name="ZuipbekerApp.exe" version="1.0.0.0" publicKeyToken="a4f31484a0e57355" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=PC-OLIVIER\olivi</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>+O6JwvjrvL3Y5CEZpoMROvILbKzWG7Q34urnbgLl5RY=</DigestValue></Reference></SignedInfo><SignatureValue>C5OpMU27POXtXAVVjWIlGANHrKwqB+wAyo6g3PFRlNa3SH6m5WVDdRQoHllxuF1wscCfaGUMd2fa8oXDpSFakboEWl2GOVPxk02We6pVPFboTwDUNaudDSKdjSNDs8rQfXaVcFv9caQ5aGOruFMSAGG95K0ilHNmR/NMHZfVafM=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>0N5Wad/Fs2ZyAc3TvonP6WCDfNrBW7DBkEsWf6QrRtiEQ2aiNVCdqlhhpHniXzNuhQj5WQupexnQyRQq3gAUfUWDxQyrXNWQ4OhLshgfmrDMmJLpApHFvYFORU4SMrry7iZSw2736yLkqBZOW7fa0Deh8Dznw4JDmMvW7iECOZU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQIH7UcQDuuJpHUatylrFIwDANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDHiAAUABDAC0ATwBMAEkAVgBJAEUAUgBcAG8AbABpAHYAaTAeFw0yMjA0MDIxMjM2MTdaFw0yMzA0MDIxODM2MTdaMCsxKTAnBgNVBAMeIABQAEMALQBPAEwASQBWAEkARQBSAFwAbwBsAGkAdgBpMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDQ3lZp38WzZnIBzdO+ic/pYIN82sFbsMGQSxZ/pCtG2IRDZqI1UJ2qWGGkeeJfM26FCPlZC6l7GdDJFCreABR9RYPFDKtc1ZDg6EuyGB+asMyYkukCkcW9gU5FThIyuvLuJlLDbvfrIuSoFk5bt9rQN6HwPOfDgkOYy9buIQI5lQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAFYJ1B+/7g8UoTeWZAq7pv+m8hLqLwHPzveBv2GZn+39uUuHrMw9gKi6CcN3JWu+ygjgTYtSIeDheYfzsHYcEbJDK1Kdh62SEKKCIX0hxK9FaFp4VO3w2P/jz9rLuixomdvkyYsxBLXOsQdLRpkpn3XFyT5jM/JXQ66NMX1opJ1Y</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

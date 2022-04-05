@@ -1,0 +1,48 @@
+﻿<Window x:Class="ZuipbekerApp.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZuipbekerApp"
+        mc:Ignorable="d"
+        Title="Admin" WindowState="Maximized">
+    <Grid>
+        <ScrollViewer Grid.Row="2" Grid.Column="0" VerticalScrollBarVisibility="Auto">
+            <ListView x:Name="TeamList">
+                <ListBox.Template>
+                    <ControlTemplate>
+                        <WrapPanel IsItemsHost="True"/>
+                    </ControlTemplate>
+                </ListBox.Template>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                            <Border Background="GhostWhite">
+                                <StackPanel Orientation="Vertical" Margin="10,5,50,5">
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding Naam}"></TextBlock>
+                                    <Border Background="AntiqueWhite" Margin="0,20,0,0">
+                                        <TextBlock HorizontalAlignment="Center" Text="{Binding AmountBeer}" Margin="20,0,0,0"></TextBlock>
+                                    </Border>
+                                </StackPanel>
+                            </Border>
+
+                            
+                            <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
+                                <Button x:Name="btnAddOneBeer" Content="Add One Beer" Tag="{Binding Naam}" Click="AddOneBeer" Margin="5,5,5,5"/>
+                                <Button x:Name="btnAddMeter" Content="Add One Meter" Tag="{Binding Naam}" Click="AddMeter" Margin="5,5,5,5"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
+                                <Button x:Name="DeleteOneBeer" Content="Delete One Beer" Tag="{Binding Naam}" Click="DeleteOneBeer" Margin="5,5,5,5"/>
+                                <Button x:Name="DeleteMeter" Content="Delete One Meter" Tag="{Binding Naam}" Click="DeleteMeter" Margin="5,5,5,5"/>
+                            </StackPanel>
+
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </ScrollViewer>
+        <DataGrid HorizontalAlignment="Left" Height="100" Margin="-501,-112,0,0" VerticalAlignment="Top" Width="100"/>
+    </Grid>
+</Window>

@@ -1,0 +1,130 @@
+﻿<Window x:Class="ZuipbekerApp.Scorebord"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZuipbekerApp"
+        mc:Ignorable="d"
+        Title="Scorebord" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="0.6*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+    
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0" Source="C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\img\Logo.png"></Image>
+            <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="75" FontFamily="Comic Sans MS">Zuipbeker</TextBlock>
+            <Image Grid.Column="2" Source="C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\img\Logo.png"></Image>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3333*"></ColumnDefinition>
+                <ColumnDefinition Width="0.3333*"></ColumnDefinition>
+                <ColumnDefinition Width="0.3333*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock x:Name="Second" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" FontFamily="Comic Sans MS" Foreground="Silver"></TextBlock>
+                <TextBlock x:Name="SecondAmount" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" Foreground="Silver"></TextBlock>
+            </StackPanel>
+            <StackPanel  Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock x:Name="Winner" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="55" FontFamily="Comic Sans MS" Foreground="Gold"></TextBlock>
+                <TextBlock x:Name="WinnerAmount" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="45" FontFamily="Comic Sans MS" Foreground="Gold"></TextBlock>
+            </StackPanel>
+
+            <StackPanel  Grid.Column="2" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock x:Name="Third" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" Foreground="SandyBrown"></TextBlock>
+                <TextBlock x:Name="ThirdAmount" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" Foreground="SandyBrown"></TextBlock>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3333*"></ColumnDefinition>
+                <ColumnDefinition Width="0.3333*"></ColumnDefinition>
+                <ColumnDefinition Width="0.3333*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <ListView x:Name="FirstSevenTeamsNaam" Grid.Column="0" Background="Transparent" BorderThickness="0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock HorizontalAlignment="Left" Text="{Binding Naam}" FontSize="25"></TextBlock>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView x:Name="FirstSevenTeamsAmountBeer" Grid.Column="1" Background="Transparent" BorderThickness="0 0 1 0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock HorizontalAlignment="Right" Text="{Binding AmountBeer}" FontSize="25"></TextBlock>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            
+
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <ListView x:Name="SecondSevenTeamsNaam" Grid.Column="0" Background="Transparent" BorderThickness="0">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock HorizontalAlignment="Left" Text="{Binding Naam}" FontSize="25"></TextBlock>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView x:Name="SecondSevenTeamsAmountBeer" Grid.Column="1" Background="Transparent" BorderThickness="0 0 1 0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock HorizontalAlignment="Left" Text="{Binding AmountBeer}" FontSize="25"></TextBlock>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            
+            <Grid Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <ListView x:Name="ThirdSevenTeamsNaam" Grid.Column="0" Background="Transparent" BorderThickness="0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock HorizontalAlignment="Left" Text="{Binding Naam}" FontSize="25"></TextBlock>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView x:Name="ThirdSevenTeamsAmountBeer" Grid.Column="1" Background="Transparent" BorderThickness="0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock HorizontalAlignment="Left" Text="{Binding AmountBeer}" FontSize="25"></TextBlock>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            
+            
+            
+            
+        </Grid>
+
+        <TextBlock Grid.Row="4" HorizontalAlignment="Center" FontSize="30" Text="By Olivier De Brabant" FontFamily="Comic Sans MS" FontWeight="Light"></TextBlock>
+    </Grid>
+</Window>
