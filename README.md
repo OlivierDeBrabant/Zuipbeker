@@ -22,4 +22,5 @@ Deze applicatie dient om het systeem van een zuipbeker op een evenement te digit
 ## TODO
 - Dynamische fontsize (vooral op Scorebord pagina)
 - Errorhandling
+  - Vooral wanneer een teamnaam geen correcte filenaam kan zijn (vb. een tab in de naam, tekens die niet toegestaan zijn ...)
 - Styling op Admin pagina
