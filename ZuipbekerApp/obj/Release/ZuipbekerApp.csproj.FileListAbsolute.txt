@@ -19,3 +19,11 @@ C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\ZuipbekerApp.exe.man
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\ZuipbekerApp.application
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\ZuipbekerApp.exe
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\ZuipbekerApp.pdb
+C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\bin\Release\Microsoft.Win32.dll
+C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\bin\Release\Ookii.Dialogs.Wpf.dll
+C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\bin\Release\Microsoft.Win32.xml
+C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\bin\Release\Ookii.Dialogs.Wpf.pdb
+C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\bin\Release\Ookii.Dialogs.Wpf.xml
+C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\OpenFolder.g.cs
+C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\OpenFolder.baml
+C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\ZuipbekerApp.csproj.CopyComplete
