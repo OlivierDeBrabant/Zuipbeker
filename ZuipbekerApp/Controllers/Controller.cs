@@ -12,26 +12,26 @@ namespace ZuipbekerApp.Controllers
     public class Controller
     {
         ObservableCollection<Team> teams = new ObservableCollection<Team>();
-        string logTxt = System.IO.Path.Combine(@"..\..\..\..\Zuipbeker\files", "logs.txt");
+        private string folderPath;
 
-        public void MaakTeams()
+        public void MaakTeams(string path)
         {
-            string filesFolder = System.IO.Path.Combine(@"..\..\..\..\Zuipbeker", "files");
-            System.IO.Directory.CreateDirectory(filesFolder);
-            string teamsTxt = System.IO.Path.Combine(@"..\..\..\..\Zuipbeker\files", "Teams.txt");
+            folderPath = path;
+
+            string teamsTxt = System.IO.Path.Combine(folderPath, "Teams.txt");
             if (!System.IO.File.Exists(teamsTxt))
             {
                 System.IO.File.Create(teamsTxt);
             }
             else
             {
-                string[] lines = System.IO.File.ReadAllLines(@"..\..\..\..\Zuipbeker\files\Teams.txt");
+                string[] lines = System.IO.File.ReadAllLines(folderPath + @"\Teams.txt");
                 foreach (string team in lines)
                 {
                     Team t;
-                    if (File.Exists(@"..\..\..\..\Zuipbeker\files\" + team + ".txt"))
+                    if (File.Exists(System.IO.Path.Combine(folderPath, team + ".txt")))
                     {
-                        var lastline = File.ReadLines(@"..\..\..\..\Zuipbeker\files\" + team + ".txt").Last();
+                        var lastline = File.ReadLines(System.IO.Path.Combine(folderPath, team + ".txt")).Last();
                         t = new Team(team, Int16.Parse(lastline));
                     }
                     else
@@ -43,9 +43,9 @@ namespace ZuipbekerApp.Controllers
                 }
             }
             
-            if (!System.IO.File.Exists(logTxt))
+            if (!System.IO.File.Exists(System.IO.Path.Combine(folderPath, "logs.txt")))
             {
-                System.IO.File.Create(logTxt);
+                System.IO.File.Create(System.IO.Path.Combine(folderPath, "logs.txt"));
             }
         }
         public ObservableCollection<Team> GetTeams()
@@ -63,9 +63,20 @@ namespace ZuipbekerApp.Controllers
         }
         public void WriteLog(string team, string addDelete, string amount)
         {
-            using (StreamWriter sw = File.AppendText(logTxt))
+            using (StreamWriter sw = File.AppendText(System.IO.Path.Combine(folderPath, "logs.txt")))
             {
                 sw.WriteLine(DateTime.Now.ToString() + "\t" + team + "\t" + addDelete + "\t" + amount);
+            }
+        }
+        public String getFolderPath()
+        {
+            if(folderPath != null)
+            {
+                return folderPath;
+            }
+            else
+            {
+                return "NullPointer";
             }
         }
     }

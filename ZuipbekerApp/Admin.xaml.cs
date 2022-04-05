@@ -26,15 +26,20 @@ namespace ZuipbekerApp
         private Controller controller;
         private ObservableCollection<Team> teams;
         private Scorebord scorebord;
-        public Admin()
+
+        private string folderPath;
+
+        public Admin(Controller c)
         {
             InitializeComponent();
+            controller = c;
 
-            controller = new Controller();
-            controller.MaakTeams();
 
             scorebord = new Scorebord(controller);
             scorebord.Show();
+            scorebord.Activate();
+            
+            folderPath = controller.getFolderPath();
 
             performLoadTeams();
         }
@@ -49,13 +54,13 @@ namespace ZuipbekerApp
         {
             string naam = ((Button)sender).Tag.ToString();
             
-            controller.GetTeam(naam).addBeer(1);
+            controller.GetTeam(naam).addBeer(1, folderPath);
         }
         private async void AddOneBeer(object sender, RoutedEventArgs e)
         {
             string naam = ((Button)sender).Tag.ToString();
             Team t = controller.GetTeam(naam);
-            t.addBeer(1);
+            t.addBeer(1, folderPath);
 
             controller.WriteLog(t.Naam, "add", (1).ToString());
 
@@ -65,7 +70,7 @@ namespace ZuipbekerApp
         {
             string naam = ((Button)sender).Tag.ToString();
             Team t = controller.GetTeam(naam);
-            t.addBeer(11);
+            t.addBeer(11, folderPath);
 
             controller.WriteLog(t.Naam, "add", (11).ToString());
             scorebord.performLoad();
@@ -74,7 +79,7 @@ namespace ZuipbekerApp
         {
             string naam = ((Button)sender).Tag.ToString();
             Team t = controller.GetTeam(naam);
-            t.deleteBeer(1);
+            t.deleteBeer(1, folderPath);
 
             controller.WriteLog(t.Naam, "delete", (1).ToString());
             scorebord.performLoad();
@@ -83,7 +88,7 @@ namespace ZuipbekerApp
         {
             string naam = ((Button)sender).Tag.ToString();
             Team t = controller.GetTeam(naam);
-            t.deleteBeer(11);
+            t.deleteBeer(11, folderPath);
             controller.WriteLog(t.Naam, "delete", (11).ToString());
             scorebord.performLoad();
         }

@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ZuipbekerApp.exe.manifest" size="3480">
+    <dependentAssembly dependencyType="install" codebase="ZuipbekerApp.exe.manifest" size="4816">
       <assemblyIdentity name="ZuipbekerApp.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>E4TTIVbE6v9yWqATgQc7dBeMxhV/WiWnRGk9B0ncnY8=</dsig:DigestValue>
+        <dsig:DigestValue>vzjBzvwnT+FfcPY//NoQJGbz9+bZbWI6SSA6eYasXAI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

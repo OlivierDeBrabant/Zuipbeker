@@ -22,7 +22,7 @@
             </Grid.ColumnDefinitions>
 
             <Image Grid.Column="0" Source="C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\img\Logo.png"></Image>
-            <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="75" FontFamily="Comic Sans MS">Zuipbeker</TextBlock>
+            <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="90" FontFamily="Comic Sans MS">Zuipbeker</TextBlock>
             <Image Grid.Column="2" Source="C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\img\Logo.png"></Image>
         </Grid>
 
@@ -57,8 +57,8 @@
 
             <Grid Grid.Column="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
-                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.8*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <ListView x:Name="FirstSevenTeamsNaam" Grid.Column="0" Background="Transparent" BorderThickness="0">
                     <ListView.ItemTemplate>
@@ -79,8 +79,8 @@
 
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
-                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.8*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <ListView x:Name="SecondSevenTeamsNaam" Grid.Column="0" Background="Transparent" BorderThickness="0">
 
@@ -101,8 +101,8 @@
             
             <Grid Grid.Column="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
-                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.8*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <ListView x:Name="ThirdSevenTeamsNaam" Grid.Column="0" Background="Transparent" BorderThickness="0">
                     <ListView.ItemTemplate>
@@ -125,6 +125,6 @@
             
         </Grid>
 
-        <TextBlock Grid.Row="4" HorizontalAlignment="Center" FontSize="30" Text="By Olivier De Brabant" FontFamily="Comic Sans MS" FontWeight="Light"></TextBlock>
+        <TextBlock Grid.Row="4" HorizontalAlignment="Center" FontSize="25" Text="By Olivier De Brabant" FontFamily="Comic Sans MS" FontWeight="Light"></TextBlock>
     </Grid>
 </Window>

@@ -39,20 +39,20 @@ namespace ZuipbekerApp.Models
             AmountBeer = aantal;
         }
 
-        public void addBeer(int aantal)
+        public void addBeer(int aantal, string path)
         {
             AmountBeer += aantal;
-            writeTeam();
+            writeTeam(path);
         }
-        public void deleteBeer(int aantal)
+        public void deleteBeer(int aantal, string path)
         {
             AmountBeer -= aantal;
-            writeTeam();
+            writeTeam(path);
         }
 
-        public void writeTeam()
+        public void writeTeam(string folderPath)
         {
-            string path = @"..\..\..\..\Zuipbeker\files\" + Naam + ".txt";
+            string path = folderPath + @"\" + Naam + ".txt";
             using (StreamWriter sw = File.AppendText(path))
             {
                 sw.WriteLine(AmountBeer);
