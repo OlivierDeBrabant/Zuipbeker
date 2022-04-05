@@ -5,6 +5,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
+using System.Windows.Media;
 using ZuipbekerApp.Models;
 
 namespace ZuipbekerApp.Controllers
@@ -28,18 +32,27 @@ namespace ZuipbekerApp.Controllers
                 string[] lines = System.IO.File.ReadAllLines(folderPath + @"\Teams.txt");
                 foreach (string team in lines)
                 {
-                    Team t;
-                    if (File.Exists(System.IO.Path.Combine(folderPath, team + ".txt")))
+                    try
                     {
-                        var lastline = File.ReadLines(System.IO.Path.Combine(folderPath, team + ".txt")).Last();
-                        t = new Team(team, Int16.Parse(lastline));
-                    }
-                    else
-                    {
-                        t = new Team(team);
-                    }
+                        Team t;
 
-                    teams.Add(t);
+                        if (File.Exists(System.IO.Path.Combine(folderPath, team + ".txt")))
+                        {
+                            var lastline = File.ReadLines(System.IO.Path.Combine(folderPath, team + ".txt")).Last();
+                            t = new Team(team, Int16.Parse(lastline));
+                        }
+                        else
+                        {
+                            t = new Team(team);
+                        }
+                        teams.Add(t);
+
+                    } catch(System.ArgumentException e)
+                    {
+                        MessageBox.Show("There is an error that is caused by the name of a team.\nThe name of the malicious teams is: " + team + 
+                                            "\nThis team will not be displayed.\nDelete tabs and other characters that aren't allowed in a filename.",
+                                            "Error", MessageBoxButton.OK,MessageBoxImage.Error);
+                    }
                 }
             }
             

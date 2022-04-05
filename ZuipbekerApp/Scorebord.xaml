@@ -22,10 +22,11 @@
             </Grid.ColumnDefinitions>
 
             <Image Grid.Column="0" Source="C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\img\Logo.png"></Image>
-            <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="90" FontFamily="Comic Sans MS">Zuipbeker</TextBlock>
+            <Viewbox Grid.Column="1">
+                <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Comic Sans MS">Zuipbeker</TextBlock>
+            </Viewbox>
             <Image Grid.Column="2" Source="C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\img\Logo.png"></Image>
         </Grid>
-
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.3333*"></ColumnDefinition>
@@ -33,19 +34,44 @@
                 <ColumnDefinition Width="0.3333*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock x:Name="Second" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" FontFamily="Comic Sans MS" Foreground="Silver"></TextBlock>
-                <TextBlock x:Name="SecondAmount" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" Foreground="Silver"></TextBlock>
-            </StackPanel>
-            <StackPanel  Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock x:Name="Winner" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="55" FontFamily="Comic Sans MS" Foreground="Gold"></TextBlock>
-                <TextBlock x:Name="WinnerAmount" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="45" FontFamily="Comic Sans MS" Foreground="Gold"></TextBlock>
-            </StackPanel>
+            <Grid  Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20,45,50,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.65*"></RowDefinition>
+                    <RowDefinition Height="0.36*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="0">
+                    <TextBlock x:Name="Second" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Comic Sans MS" Foreground="Silver"></TextBlock>
+                </Viewbox>
+                <Viewbox Grid.Row="1">
+                    <TextBlock x:Name="SecondAmount" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Comic Sans MS" Foreground="Silver"></TextBlock>
+                </Viewbox>
+            </Grid>
 
-            <StackPanel  Grid.Column="2" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock x:Name="Third" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" Foreground="SandyBrown"></TextBlock>
-                <TextBlock x:Name="ThirdAmount" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" Foreground="SandyBrown"></TextBlock>
-            </StackPanel>
+            <Grid  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.65*"></RowDefinition>
+                    <RowDefinition Height="0.36*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="0">
+                    <TextBlock x:Name="Winner" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Comic Sans MS" Foreground="Gold"></TextBlock>
+                </Viewbox>
+                <Viewbox Grid.Row="1">
+                    <TextBlock x:Name="WinnerAmount" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Comic Sans MS" Foreground="Gold"></TextBlock>
+                </Viewbox>
+            </Grid>
+            
+            <Grid  Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50,55,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.65*"></RowDefinition>
+                    <RowDefinition Height="0.36*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="0">
+                    <TextBlock x:Name="Third" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Comic Sans MS" Foreground="SandyBrown"></TextBlock>
+                </Viewbox>
+                <Viewbox Grid.Row="1">
+                    <TextBlock x:Name="ThirdAmount" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Comic Sans MS" Foreground="SandyBrown"></TextBlock>
+                </Viewbox>
+            </Grid>
         </Grid>
 
         <Grid Grid.Row="2">

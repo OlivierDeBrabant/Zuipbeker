@@ -30,18 +30,18 @@ namespace ZuipbekerApp
             InitializeComponent();
             controller = new Controller();
         }
-        private void btnOpenFile_Click(object sender, RoutedEventArgs e)
+        private void btnOpenFolder_Click(object sender, RoutedEventArgs e)
         {
             var folderDialog = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
             folderDialog.ShowDialog();
             path = folderDialog.SelectedPath;
 
             FolderPath.Text = path;
-
-            controller.MaakTeams(path);
+            btnNext.Focus();
         }
         private void btnNextClick(object sender, RoutedEventArgs e)
         {
+            controller.MaakTeams(path);
             Admin admin = new Admin(controller);
             admin.Show();
             this.Close();
