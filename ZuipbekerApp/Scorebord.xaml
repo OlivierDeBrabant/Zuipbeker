@@ -15,18 +15,18 @@
             <RowDefinition Height="0.1*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid>
-    
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"></ColumnDefinition>
                 <ColumnDefinition Width="0.6*"></ColumnDefinition>
                 <ColumnDefinition Width="0.2*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Image Grid.Column="0" Source="C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\img\Logo.png"></Image>
+            <Image Grid.Column="0" Source="Logo.png"></Image>
             <Viewbox Grid.Column="1">
                 <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Comic Sans MS">Zuipbeker</TextBlock>
             </Viewbox>
-            <Image Grid.Column="2" Source="C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\img\Logo.png"></Image>
+            <Image Grid.Column="2" Source="Logo.png"></Image>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -60,7 +60,7 @@
                     <TextBlock x:Name="WinnerAmount" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Comic Sans MS" Foreground="Gold"></TextBlock>
                 </Viewbox>
             </Grid>
-            
+
             <Grid  Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50,55,20,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.65*"></RowDefinition>
@@ -87,7 +87,7 @@
                     <ColumnDefinition Width="0.8*"></ColumnDefinition>
                     <ColumnDefinition Width="0.2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <ListView x:Name="FirstSevenTeamsNaam" Grid.Column="0" Background="Transparent" BorderThickness="0">
+                <ListView x:Name="FirstSevenTeamsNaam" Focusable="False" Grid.Column="0" Background="Transparent" BorderThickness="0">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextBlock HorizontalAlignment="Left" Text="{Binding Naam}" FontSize="25"></TextBlock>
@@ -102,7 +102,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </Grid>
-            
+
 
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
@@ -125,7 +125,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </Grid>
-            
+
             <Grid Grid.Column="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.8*"></ColumnDefinition>
@@ -146,12 +146,9 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </Grid>
-            
-            
-            
-            
         </Grid>
-
-        <TextBlock Grid.Row="4" HorizontalAlignment="Center" FontSize="25" Text="By Olivier De Brabant" FontFamily="Comic Sans MS" FontWeight="Light"></TextBlock>
+        <Viewbox Grid.Row="4" Margin="10">
+            <TextBlock HorizontalAlignment="Center" Text="By Olivier De Brabant" FontFamily="Comic Sans MS" FontWeight="Light"></TextBlock>
+        </Viewbox>
     </Grid>
 </Window>

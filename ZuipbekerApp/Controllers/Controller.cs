@@ -79,6 +79,7 @@ namespace ZuipbekerApp.Controllers
             using (StreamWriter sw = File.AppendText(System.IO.Path.Combine(folderPath, "logs.txt")))
             {
                 sw.WriteLine(DateTime.Now.ToString() + "\t" + team + "\t" + addDelete + "\t" + amount);
+                sw.Close();
             }
         }
         public String getFolderPath()

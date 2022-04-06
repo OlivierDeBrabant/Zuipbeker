@@ -44,19 +44,19 @@ namespace ZuipbekerApp
             performLoadTeams();
         }
 
-        private async void performLoadTeams()
+        private void performLoadTeams()
         {
             teams = controller.GetTeams();
             TeamList.ItemsSource = teams;
         }
 
-        private async void AddCustomBeer(object sender, RoutedEventArgs e)
+        private void AddCustomBeer(object sender, RoutedEventArgs e)
         {
             string naam = ((Button)sender).Tag.ToString();
             
             controller.GetTeam(naam).addBeer(1, folderPath);
         }
-        private async void AddOneBeer(object sender, RoutedEventArgs e)
+        private void AddOneBeer(object sender, RoutedEventArgs e)
         {
             string naam = ((Button)sender).Tag.ToString();
             Team t = controller.GetTeam(naam);
@@ -66,7 +66,7 @@ namespace ZuipbekerApp
 
             scorebord.performLoad();
         }
-        private async void AddMeter(object sender, RoutedEventArgs e)
+        private void AddMeter(object sender, RoutedEventArgs e)
         {
             string naam = ((Button)sender).Tag.ToString();
             Team t = controller.GetTeam(naam);
@@ -75,7 +75,7 @@ namespace ZuipbekerApp
             controller.WriteLog(t.Naam, "add", (11).ToString());
             scorebord.performLoad();
         }
-        private async void DeleteOneBeer(object sender, RoutedEventArgs e)
+        private void DeleteOneBeer(object sender, RoutedEventArgs e)
         {
             string naam = ((Button)sender).Tag.ToString();
             Team t = controller.GetTeam(naam);
@@ -84,13 +84,18 @@ namespace ZuipbekerApp
             controller.WriteLog(t.Naam, "delete", (1).ToString());
             scorebord.performLoad();
         }
-        private async void DeleteMeter(object sender, RoutedEventArgs e)
+        private void DeleteMeter(object sender, RoutedEventArgs e)
         {
             string naam = ((Button)sender).Tag.ToString();
             Team t = controller.GetTeam(naam);
             t.deleteBeer(11, folderPath);
             controller.WriteLog(t.Naam, "delete", (11).ToString());
             scorebord.performLoad();
+        }
+        private void btnOpenLogFile(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Do not change anything in this file!\nIf changes are made, close the file without saving it.","Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            System.Diagnostics.Process.Start(System.IO.Path.Combine(folderPath, "logs.txt"));
         }
     }
 }

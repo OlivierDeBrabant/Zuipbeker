@@ -29,6 +29,8 @@ namespace ZuipbekerApp
         {
             InitializeComponent();
             controller = new Controller();
+            btnOpenFolder.Focus();
+            btnNext.IsEnabled = false;
         }
         private void btnOpenFolder_Click(object sender, RoutedEventArgs e)
         {
@@ -37,6 +39,7 @@ namespace ZuipbekerApp
             path = folderDialog.SelectedPath;
 
             FolderPath.Text = path;
+            btnNext.IsEnabled = true;
             btnNext.Focus();
         }
         private void btnNextClick(object sender, RoutedEventArgs e)

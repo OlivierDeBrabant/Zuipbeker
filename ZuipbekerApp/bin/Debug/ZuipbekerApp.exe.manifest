@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ZuipbekerApp.exe" size="202176">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ZuipbekerApp.exe" size="261568">
       <assemblyIdentity name="ZuipbekerApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+DXj17yh4TxKTFPHIgCWkqt2VKwXtK4MNELNg7lQI6s=</dsig:DigestValue>
+        <dsig:DigestValue>Hgz0BLVBVzhkjN4m7kCJOdsrhlwXEqX1vJElOhNhU/Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -53,10 +53,9 @@ namespace ZuipbekerApp.Models
         public void writeTeam(string folderPath)
         {
             string path = folderPath + @"\" + Naam + ".txt";
-            using (StreamWriter sw = File.AppendText(path))
-            {
-                sw.WriteLine(AmountBeer);
-            }
+            StreamWriter sw = new StreamWriter(path);
+            sw.WriteLine(AmountBeer);
+            sw.Close();
         }
     }
 }

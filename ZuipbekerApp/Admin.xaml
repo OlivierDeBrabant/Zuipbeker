@@ -9,41 +9,40 @@
         Title="Admin" WindowState="Maximized">
     <Grid>
         <ScrollViewer Grid.Row="2" Grid.Column="0" VerticalScrollBarVisibility="Auto">
-            <ListView x:Name="TeamList">
-                <ListBox.Template>
-                    <ControlTemplate>
-                        <WrapPanel IsItemsHost="True"/>
-                    </ControlTemplate>
-                </ListBox.Template>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
-                            <Border Background="GhostWhite">
-                                <StackPanel Orientation="Vertical" Margin="10,5,50,5">
-                                    <TextBlock HorizontalAlignment="Center" Text="{Binding Naam}"></TextBlock>
-                                    <Border Background="AntiqueWhite" Margin="0,20,0,0">
-                                        <TextBlock HorizontalAlignment="Center" Text="{Binding AmountBeer}" Margin="20,0,0,0"></TextBlock>
-                                    </Border>
+            <StackPanel Orientation="Vertical">
+                <Button HorizontalAlignment="Center" Width="80" Margin="5" Click="btnOpenLogFile">Open Logfile</Button>
+                <ListView x:Name="TeamList" Focusable="False" SelectionMode="Single">
+                    <ListBox.Template>
+                        <ControlTemplate>
+                            <WrapPanel IsItemsHost="True"/>
+                        </ControlTemplate>
+                    </ListBox.Template>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="5">
+                                <Border Background="GhostWhite">
+                                    <StackPanel Orientation="Vertical" Margin="5">
+                                        <Viewbox  Width="150" Height="40">
+                                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold"  Text="{Binding Naam}"></TextBlock>
+                                        </Viewbox>
+                                        <Border Background="AntiqueWhite" Margin="5">
+                                            <TextBlock HorizontalAlignment="Center" Text="{Binding AmountBeer}"></TextBlock>
+                                        </Border>
+                                    </StackPanel>
+                                </Border>
+
+
+                                <StackPanel Orientation="Horizontal" Margin="10">
+                                    <Button x:Name="btnAddOneBeer" Content="Add One Beer" Tag="{Binding Naam}" Click="AddOneBeer" Margin="5"/>
+                                    <Button x:Name="btnAddMeter" Content="Add One Meter" Tag="{Binding Naam}" Click="AddMeter" Margin="5"/>
+                                    <Button x:Name="DeleteOneBeer" Content="Delete One Beer" Tag="{Binding Naam}" Click="DeleteOneBeer" Margin="5,5,5,5"/>
+                                    <Button x:Name="DeleteMeter" Content="Delete One Meter" Tag="{Binding Naam}" Click="DeleteMeter" Margin="5,5,5,5"/>
                                 </StackPanel>
-                            </Border>
-
-                            
-                            <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
-                                <Button x:Name="btnAddOneBeer" Content="Add One Beer" Tag="{Binding Naam}" Click="AddOneBeer" Margin="5,5,5,5"/>
-                                <Button x:Name="btnAddMeter" Content="Add One Meter" Tag="{Binding Naam}" Click="AddMeter" Margin="5,5,5,5"/>
                             </StackPanel>
-
-                            <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
-                                <Button x:Name="DeleteOneBeer" Content="Delete One Beer" Tag="{Binding Naam}" Click="DeleteOneBeer" Margin="5,5,5,5"/>
-                                <Button x:Name="DeleteMeter" Content="Delete One Meter" Tag="{Binding Naam}" Click="DeleteMeter" Margin="5,5,5,5"/>
-                            </StackPanel>
-
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
         </ScrollViewer>
-        <DataGrid HorizontalAlignment="Left" Height="100" Margin="-501,-112,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>
