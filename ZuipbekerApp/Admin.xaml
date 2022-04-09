@@ -10,7 +10,7 @@
     <Grid>
         <ScrollViewer Grid.Row="2" Grid.Column="0" VerticalScrollBarVisibility="Auto">
             <StackPanel Orientation="Vertical">
-                <Button HorizontalAlignment="Center" Width="80" Margin="5" Click="btnOpenLogFile">Open Logfile</Button>
+                <Button HorizontalAlignment="Center" Width="80" Margin="5" Click="BtnOpenLogFile">Open Logfile</Button>
                 <ListView x:Name="TeamList" Focusable="False" SelectionMode="Single">
                     <ListBox.Template>
                         <ControlTemplate>

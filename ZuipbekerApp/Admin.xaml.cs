@@ -23,28 +23,27 @@ namespace ZuipbekerApp
     /// </summary>
     public partial class Admin : Window
     {
-        private Controller controller;
+        private readonly Controller controller;
         private ObservableCollection<Team> teams;
-        private Scorebord scorebord;
+        private readonly  Scorebord scorebord;
+        Boolean logMessageShown = false;
 
-        private string folderPath;
+        private readonly string folderPath;
 
         public Admin(Controller c)
         {
             InitializeComponent();
             controller = c;
 
-
             scorebord = new Scorebord(controller);
             scorebord.Show();
-            scorebord.Activate();
-            
-            folderPath = controller.getFolderPath();
+            folderPath = controller.GetFolderPath();
 
-            performLoadTeams();
+            PerformLoadTeams();
+
         }
 
-        private void performLoadTeams()
+        private void PerformLoadTeams()
         {
             teams = controller.GetTeams();
             TeamList.ItemsSource = teams;
@@ -64,7 +63,7 @@ namespace ZuipbekerApp
 
             controller.WriteLog(t.Naam, "add", (1).ToString());
 
-            scorebord.performLoad();
+            scorebord.PerformLoad();
         }
         private void AddMeter(object sender, RoutedEventArgs e)
         {
@@ -73,7 +72,7 @@ namespace ZuipbekerApp
             t.addBeer(11, folderPath);
 
             controller.WriteLog(t.Naam, "add", (11).ToString());
-            scorebord.performLoad();
+            scorebord.PerformLoad();
         }
         private void DeleteOneBeer(object sender, RoutedEventArgs e)
         {
@@ -82,7 +81,7 @@ namespace ZuipbekerApp
             t.deleteBeer(1, folderPath);
 
             controller.WriteLog(t.Naam, "delete", (1).ToString());
-            scorebord.performLoad();
+            scorebord.PerformLoad();
         }
         private void DeleteMeter(object sender, RoutedEventArgs e)
         {
@@ -90,11 +89,17 @@ namespace ZuipbekerApp
             Team t = controller.GetTeam(naam);
             t.deleteBeer(11, folderPath);
             controller.WriteLog(t.Naam, "delete", (11).ToString());
-            scorebord.performLoad();
+            scorebord.PerformLoad();
         }
-        private void btnOpenLogFile(object sender, RoutedEventArgs e)
+        private void BtnOpenLogFile(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Do not change anything in this file!\nIf changes are made, close the file without saving it.","Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            if (!logMessageShown)
+            {
+                MessageBox.Show("Do not change anything in this file!\nIf changes are made, close the file without saving it.","Warning", 
+                            MessageBoxButton.OK, MessageBoxImage.Warning);
+                logMessageShown = true;
+            }
+
             System.Diagnostics.Process.Start(System.IO.Path.Combine(folderPath, "logs.txt"));
         }
     }

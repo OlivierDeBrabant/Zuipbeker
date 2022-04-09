@@ -22,7 +22,7 @@ namespace ZuipbekerApp
     /// </summary>
     public partial class Scorebord : Window
     {
-        private Controller controller;
+        private readonly Controller controller;
         private List<Team> teams;
 
         public Scorebord(Controller c)
@@ -30,10 +30,12 @@ namespace ZuipbekerApp
             InitializeComponent();
 
             controller = c;
-            performLoad();
+            PerformLoad();
+
+
         }
 
-        public void performLoad()
+        public void PerformLoad()
         {
             teams = controller.GetSortedTeams();
             int numberofTeams = teams.Count();

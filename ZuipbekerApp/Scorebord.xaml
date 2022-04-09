@@ -87,20 +87,24 @@
                     <ColumnDefinition Width="0.8*"></ColumnDefinition>
                     <ColumnDefinition Width="0.2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <ListView x:Name="FirstSevenTeamsNaam" Focusable="False" Grid.Column="0" Background="Transparent" BorderThickness="0">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock HorizontalAlignment="Left" Text="{Binding Naam}" FontSize="25"></TextBlock>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <ListView x:Name="FirstSevenTeamsAmountBeer" Grid.Column="1" Background="Transparent" BorderThickness="0 0 1 0">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock HorizontalAlignment="Right" Text="{Binding AmountBeer}" FontSize="25"></TextBlock>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                <Viewbox Grid.Column="0">
+                    <ListView x:Name="FirstSevenTeamsNaam" Focusable="False"  Background="Transparent" BorderThickness="0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock HorizontalAlignment="Left" Text="{Binding Naam}"></TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Viewbox>
+                <Viewbox  Grid.Column="1">
+                    <ListView x:Name="FirstSevenTeamsAmountBeer" Focusable="False" Background="Transparent" BorderThickness="0 0 1 0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock HorizontalAlignment="Right" Text="{Binding AmountBeer}" FontSize="25"></TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Viewbox>
             </Grid>
 
 
@@ -109,21 +113,24 @@
                     <ColumnDefinition Width="0.8*"></ColumnDefinition>
                     <ColumnDefinition Width="0.2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <ListView x:Name="SecondSevenTeamsNaam" Grid.Column="0" Background="Transparent" BorderThickness="0">
-
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock HorizontalAlignment="Left" Text="{Binding Naam}" FontSize="25"></TextBlock>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <ListView x:Name="SecondSevenTeamsAmountBeer" Grid.Column="1" Background="Transparent" BorderThickness="0 0 1 0">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock HorizontalAlignment="Left" Text="{Binding AmountBeer}" FontSize="25"></TextBlock>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                <Viewbox Grid.Column="0">
+                    <ListView x:Name="SecondSevenTeamsNaam" Grid.Column="0" Background="Transparent" BorderThickness="0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock HorizontalAlignment="Left" Text="{Binding Naam}" FontSize="25"></TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Viewbox>
+                <Viewbox  Grid.Column="1">
+                    <ListView x:Name="SecondSevenTeamsAmountBeer" Grid.Column="1" Background="Transparent" BorderThickness="0 0 1 0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock HorizontalAlignment="Left" Text="{Binding AmountBeer}" FontSize="25"></TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Viewbox>
             </Grid>
 
             <Grid Grid.Column="2">
@@ -131,20 +138,24 @@
                     <ColumnDefinition Width="0.8*"></ColumnDefinition>
                     <ColumnDefinition Width="0.2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <ListView x:Name="ThirdSevenTeamsNaam" Grid.Column="0" Background="Transparent" BorderThickness="0">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock HorizontalAlignment="Left" Text="{Binding Naam}" FontSize="25"></TextBlock>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <ListView x:Name="ThirdSevenTeamsAmountBeer" Grid.Column="1" Background="Transparent" BorderThickness="0">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock HorizontalAlignment="Left" Text="{Binding AmountBeer}" FontSize="25"></TextBlock>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                <Viewbox Grid.Column="0">
+                    <ListView x:Name="ThirdSevenTeamsNaam" Grid.Column="0" Background="Transparent" BorderThickness="0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock HorizontalAlignment="Left" Text="{Binding Naam}" FontSize="25"></TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Viewbox>
+                <Viewbox  Grid.Column="1">
+                    <ListView x:Name="ThirdSevenTeamsAmountBeer" Grid.Column="1" Background="Transparent" BorderThickness="0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock HorizontalAlignment="Left" Text="{Binding AmountBeer}" FontSize="25"></TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Viewbox>
             </Grid>
         </Grid>
         <Viewbox Grid.Row="4" Margin="10">

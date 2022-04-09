@@ -15,7 +15,7 @@ namespace ZuipbekerApp.Controllers
 {
     public class Controller
     {
-        ObservableCollection<Team> teams = new ObservableCollection<Team>();
+        readonly ObservableCollection<Team> teams = new ObservableCollection<Team>();
         private string folderPath;
 
         public void MaakTeams(string path)
@@ -47,7 +47,7 @@ namespace ZuipbekerApp.Controllers
                         }
                         teams.Add(t);
 
-                    } catch(System.ArgumentException e)
+                    } catch(System.ArgumentException)
                     {
                         MessageBox.Show("There is an error that is caused by the name of a team.\nThe name of the malicious teams is: " + team + 
                                             "\nThis team will not be displayed.\nDelete tabs and other characters that aren't allowed in a filename.",
@@ -82,7 +82,7 @@ namespace ZuipbekerApp.Controllers
                 sw.Close();
             }
         }
-        public String getFolderPath()
+        public String GetFolderPath()
         {
             if(folderPath != null)
             {
