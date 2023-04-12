@@ -26,7 +26,4 @@ Deze applicatie dient om het systeem van een zuipbeker op een evenement te digit
 - Deze map bevat de teams. Je kan ook kiezen om zelf een nieuwe locatie te gebruiken om je eigen teams in op te slaan.
 
 ## TODO
-- Dynamische fontsize (Top 3 al gedaan, overige teams nog niet)
-- Errorhandling
-- Styling op Admin pagina
 - Index geven aan teams buiten top 3
