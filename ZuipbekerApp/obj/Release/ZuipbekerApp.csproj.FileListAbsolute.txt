@@ -1,4 +1,3 @@
-C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\ZuipbekerApp.csprojAssemblyReference.cache
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\Admin.g.cs
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\Scorebord.g.cs
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\App.g.cs
@@ -27,3 +26,5 @@ C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\bin\Release\Ookii.Dialogs.Wpf.xm
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\OpenFolder.g.cs
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\OpenFolder.baml
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\ZuipbekerApp.csproj.CopyComplete
+C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\ZuipbekerApp.csproj.AssemblyReference.cache
+C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Release\ZuipbekerApp.csproj.SuggestedBindingRedirects.cache

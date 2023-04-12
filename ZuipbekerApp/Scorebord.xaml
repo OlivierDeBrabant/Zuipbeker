@@ -158,8 +158,8 @@
                 </Viewbox>
             </Grid>
         </Grid>
-        <Viewbox Grid.Row="4" Margin="10">
-            <TextBlock HorizontalAlignment="Center" Text="By Olivier De Brabant" FontFamily="Comic Sans MS" FontWeight="Light"></TextBlock>
+        <Viewbox Grid.Row="5" Margin="15">
+            <TextBlock HorizontalAlignment="Center" Text="@ScoutsWaregem 2023 By Olivier De Brabant" FontFamily="Comic Sans MS" FontWeight="Light"></TextBlock>
         </Viewbox>
     </Grid>
 </Window>

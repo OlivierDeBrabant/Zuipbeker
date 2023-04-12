@@ -1,7 +1,6 @@
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\bin\Debug\ZuipbekerApp.exe.config
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\bin\Debug\ZuipbekerApp.exe
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\bin\Debug\ZuipbekerApp.pdb
-C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Debug\ZuipbekerApp.csprojAssemblyReference.cache
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Debug\Admin.g.cs
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Debug\App.g.cs
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Debug\ZuipbekerApp_MarkupCompile.cache
@@ -27,3 +26,5 @@ C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Debug\ZuipbekerApp.csproj.Co
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\bin\Debug\Ookii.Dialogs.Wpf.dll
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\bin\Debug\Ookii.Dialogs.Wpf.pdb
 C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\bin\Debug\Ookii.Dialogs.Wpf.xml
+C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Debug\ZuipbekerApp.csproj.AssemblyReference.cache
+C:\Users\olivi\Documents\Zuipbeker\ZuipbekerApp\obj\Debug\ZuipbekerApp.csproj.SuggestedBindingRedirects.cache

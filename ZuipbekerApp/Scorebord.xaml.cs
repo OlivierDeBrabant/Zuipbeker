@@ -51,20 +51,20 @@ namespace ZuipbekerApp
                 ThirdAmount.Text = teams[2].AmountBeer.ToString();
             }
             
-            if(numberofTeams >= 10)
+            if(numberofTeams >= 12)
             {
-                FirstSevenTeamsNaam.ItemsSource = teams.GetRange(3, 7);
-                FirstSevenTeamsAmountBeer.ItemsSource = teams.GetRange(3, 7);
+                FirstSevenTeamsNaam.ItemsSource = teams.GetRange(3, 9);
+                FirstSevenTeamsAmountBeer.ItemsSource = teams.GetRange(3, 9);
             }
-            if(numberofTeams >= 17)
+            if(numberofTeams >= 21)
             {
-                SecondSevenTeamsNaam.ItemsSource = teams.GetRange(10, 7);
-                SecondSevenTeamsAmountBeer.ItemsSource = teams.GetRange(10, 7);
+                SecondSevenTeamsNaam.ItemsSource = teams.GetRange(12, 9);
+                SecondSevenTeamsAmountBeer.ItemsSource = teams.GetRange(12, 9);
             }
-            if(numberofTeams >= 24)
+            if(numberofTeams >= 30)
             {
-                ThirdSevenTeamsNaam.ItemsSource = teams.GetRange(17, 7);
-                ThirdSevenTeamsAmountBeer.ItemsSource = teams.GetRange(17, 7);
+                ThirdSevenTeamsNaam.ItemsSource = teams.GetRange(21, 9);
+                ThirdSevenTeamsAmountBeer.ItemsSource = teams.GetRange(21, 9);
             }
         }
     }

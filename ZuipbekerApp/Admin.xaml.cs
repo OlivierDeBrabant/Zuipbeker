@@ -100,7 +100,7 @@ namespace ZuipbekerApp
                 logMessageShown = true;
             }
 
-            System.Diagnostics.Process.Start(System.IO.Path.Combine(folderPath, "logs.txt"));
+            System.Diagnostics.Process.Start(System.IO.Path.Combine(folderPath, "logs.csv"));
         }
     }
 }

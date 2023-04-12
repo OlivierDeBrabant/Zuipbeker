@@ -56,9 +56,9 @@ namespace ZuipbekerApp.Controllers
                 }
             }
             
-            if (!System.IO.File.Exists(System.IO.Path.Combine(folderPath, "logs.txt")))
+            if (!System.IO.File.Exists(System.IO.Path.Combine(folderPath, "logs.csv")))
             {
-                System.IO.File.Create(System.IO.Path.Combine(folderPath, "logs.txt"));
+                System.IO.File.Create(System.IO.Path.Combine(folderPath, "logs.csv"));
             }
         }
         public ObservableCollection<Team> GetTeams()
@@ -76,9 +76,9 @@ namespace ZuipbekerApp.Controllers
         }
         public void WriteLog(string team, string addDelete, string amount)
         {
-            using (StreamWriter sw = File.AppendText(System.IO.Path.Combine(folderPath, "logs.txt")))
+            using (StreamWriter sw = File.AppendText(System.IO.Path.Combine(folderPath, "logs.csv")))
             {
-                sw.WriteLine(DateTime.Now.ToString() + "\t" + team + "\t" + addDelete + "\t" + amount);
+                sw.WriteLine(DateTime.Now.ToString() + ";" + team + ";" + addDelete + ";" + amount);
                 sw.Close();
             }
         }
